@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HTML Generator</title>
+
+    <link href="css/custom.css" rel="stylesheet">  
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+          <h3>HTML Generator</h3>
+            <form>
+              <div class="form-group">
+                <ol class="breadcrumb">Bajada</ol>
+                <textarea class="form-control" id="lead" rows="2" placeholder="Descripción"></textarea>
+                <h6>Cantidad de caracteres: <span id="lead-characters"><span></h6>
+              </div>
+              <div class="form-group">
+                <ol class="breadcrumb">Descripción</ol>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="paragraph">
+                      <label for="title">Párrafo 1</label>
+                      <input type="text" class="form-control" id="p1-title" placeholder="Título">
+                      <textarea class="form-control" id="p1" rows="3" placeholder="Descripción"></textarea>
+                      <h6>Cantidad de caracteres: <span id="p1-characters"><span></h6>
+                    </div>
+                    <div class="paragraph">
+                      <label for="title">Párrafo 2</label>
+                      <input type="text" class="form-control" id="p2-title" placeholder="Título">
+                      <textarea class="form-control" id="p2" rows="3" placeholder="Descripción"></textarea>
+                      <h6>Cantidad de caracteres: <span id="p2-characters"><span></h6>
+                    </div>  
+                    <div class="paragraph">
+                      <label for="title">Párrafo 3</label>
+                      <input type="text" class="form-control" id="p3-title" placeholder="Título">
+                      <textarea class="form-control" id="p3" rows="3" placeholder="Descripción"></textarea>
+                    <h6>Cantidad de caracteres: <span id="p3-characters"><span></h6>
+                    </div>
+                    <div class="paragraph">
+                      <label for="title">Párrafo 4</label>
+                      <input type="text" class="form-control" id="p4-title" placeholder="Título">
+                      <textarea class="form-control" id="p4" rows="3" placeholder="Descripción"></textarea>
+                      <h6>Cantidad de caracteres: <span id="p4-characters"><span></h6>
+                    </div>
+                    <div class="paragraph">
+                      <label for="title">Párrafo 5</label>
+                      <input type="text" class="form-control" id="p5-title" placeholder="Título">
+                      <textarea class="form-control" id="p5" rows="3" placeholder="Descripción"></textarea>
+                      <h6>Cantidad de caracteres: <span id="p5-characters"><span></h6>
+                    </div>
+                    <div class="paragraph">
+                      <label for="title">Párrafo 6</label>
+                      <input type="text" class="form-control" id="p6-title" placeholder="Título">
+                      <textarea class="form-control" id="p6" rows="3" placeholder="Descripción"></textarea>
+                      <h6>Cantidad de caracteres: <span id="p6-characters"><span></h6>
+                    </div>
+                    <div class="paragraph">
+                      <label for="title">Párrafo 7</label>
+                      <input type="text" class="form-control" id="p7-title" placeholder="Título">
+                      <textarea class="form-control" id="p7" rows="3" placeholder="Descripción"></textarea>
+                      <h6>Cantidad de caracteres: <span id="p7-characters"><span></h6>
+                    </div>
+                    <div class="paragraph">
+                      <label for="title">Párrafo 8</label>
+                      <input type="text" class="form-control" id="p8-title" placeholder="Título">
+                      <textarea class="form-control" id="p8" rows="3" placeholder="Descripción"></textarea>
+                      <h6>Cantidad de caracteres: <span id="p8-characters"><span></h6>
+                    </div>
+                      <div class="paragraph">
+                      <label for="title">Párrafo 9</label>
+                      <input type="text" class="form-control" id="p9-title" placeholder="Título">
+                      <textarea class="form-control" id="p9" rows="3" placeholder="Descripción"></textarea>
+                      <h6>Cantidad de caracteres: <span id="p9-characters"><span></h6>
+                    </div>
+                    <div class="paragraph">
+                      <label for="title">Párrafo 10</label>
+                      <input type="text" class="form-control" id="p10-title" placeholder="Título">
+                      <textarea class="form-control" id="p10" rows="3" placeholder="Descripción"></textarea>
+                      <h6>Cantidad de caracteres: <span id="p10-characters"><span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" id="generateHTML" class="btn btn-primary" data-toggle="modal" data-target="#generateModal">Generar HTML</button>
+            </form>
+        </div>    
+        <div class="col-md-1"></div>
+      </div>
+     </div>
+     <!-- Modal -->
+      <div class="modal fade" id="generateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">HTML</h4>
+            </div>
+            <div class="modal-body">
+              <textarea class="form-control" id="html-code" rows="6"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" data-clipboard-target="#html-code">Copiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/clipboard.min.js"></script>
+    <script src="js/generate.js"></script>
+    <script>
+
+      var clipboard = new Clipboard('.btn');
+
+      $('#lead').keyup(function() {
+          var cs = $(this).val().length;
+          $('#lead-characters').text(cs);
+      });
+      $('#p1').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p1-characters').text(cs);
+      });
+      $('#p2').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p2-characters').text(cs);
+      });
+      $('#p3').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p3-characters').text(cs);
+      });
+      $('#p4').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p4-characters').text(cs);
+      });
+      $('#p5').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p5-characters').text(cs);
+      });
+      $('#p6').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p6-characters').text(cs);
+      });
+      $('#p7').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p7-characters').text(cs);
+      });
+      $('#p8').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p8-characters').text(cs);
+      });
+      $('#p9').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p9-characters').text(cs);
+      });
+      $('#p10').keyup(function() {
+          var cs = $(this).val().length;
+          $('#p10-characters').text(cs);
+      });
+
+    </script>
+  </body>
+</html>
