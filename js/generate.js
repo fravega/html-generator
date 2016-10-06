@@ -13,6 +13,7 @@ $('#generateHTML').click(function() {
 
 	}
 
+	htmlCode += '<div class="productDescription__wrap">'
 
 	$('.paragraph').each(function() {
 
@@ -47,6 +48,8 @@ $('#generateHTML').click(function() {
 	 	htmlCode += paragraph
 
 	});
+
+	htmlCode += '</div>'
 
 	$('#html-code').val(htmlCode)
 
